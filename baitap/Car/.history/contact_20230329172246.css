@@ -1,0 +1,81 @@
+.modal {
+  margin: 0 auto;
+  width: 600px;
+}
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+.header {
+  background-color: aqua;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+.box {
+  width: 100%;
+  height: fit-content;
+  min-height: 70%;
+  /* height: 470px; */
+  background-color: #fff;
+}
+.modal ul {
+  width: 100%;
+}
+.modal li {
+  justify-content: center;
+}
+.row-2 input {
+  width: 45% !important;
+  margin-right: 10px;
+}
+.modal select {
+  color: #ccc;
+}
+.modal input[type="text"],
+.modal select {
+  width: 92%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 8px;
+}
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+#content {
+  height: 100px;
+}
+#content::placeholder {
+  transform: translateY(-250%);
+}
+.check-box {
+  margin-top: 10px;
+  border-radius: 0;
+}
+.modal input[type="checkbox"] {
+  margin-right: 8px;
+}
+.check-box a {
+  text-decoration: none;
+  margin-left: 4px;
+  color: deepskyblue;
+}
+.modal button {
+  width: 10%;
+  height: 30px;
+  background: deepskyblue;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.modal button:hover {
+  opacity: 0.4;
+}
+.force {
+  margin-left: 4%;
+  padding-bottom: 10px;
+}

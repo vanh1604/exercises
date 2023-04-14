@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div className="modal" id="modal">
+      <div className="container">
+        <div className="header">Contact Us</div>
+        <div className="box">
+          <ul className="content">
+            <li className="line row-2">
+              <input type="text" placeholder="Họ tên" id="name" />
+              <input type="text" placeholder="E-mail *" />
+            </li>
+            <li className="line row-2">
+              <input type="text" placeholder="Điện thoại *" id="phone-number" />
+              <input type="text" placeholder="Địa chỉ" />
+            </li>
+            <li className="line">
+              <select name="service" id="service">
+                <option value="default">Chọn một dịch vụ *</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </li>
+            <li className="line">
+              <input type="text" placeholder="Nội dung *" id="content" />
+            </li>
+            <li className="line check-box">
+              <input type="checkbox" name="" id="" />
+              Tôi đã đọc và đồng ý với <a href="">điều khoản</a>
+            </li>
+            <li className="line">
+              <button id="button">Gửi</button>
+            </li>
+          </ul>
+          <div className="force">(*) Thông tin bắt buộc phải nhập</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

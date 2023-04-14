@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.content {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000000;
+}
+h1 {
+  text-align: center;
+}
+.main {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first {
+  margin-left: 50px;
+}
+.last {
+  margin-left: 55px;
+}
+.date {
+  margin-left: 40px;
+}
+.email {
+  margin-left: 86px;
+}
+.phone {
+  margin-left: 33px;
+}
+form {
+  width: 450px;
+}
+.flex {
+  width: 100%;
+}
+input {
+  width: 200px;
+}
+button {
+  padding: 10px;
+  background-color: #888888;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #cccccc;
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lokey's HRMW|Đăng Nhập</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css"> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/util.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+
+    <!--===============================================================================================-->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" -->
+    <!-- integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css"> -->
+    <!--===============================================================================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+    <style>
+        * {
+            margin: 0px; 
+            padding: 0px; 
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family:sans-serif;
+        }
+
+        /*---------------------------------------------*/
+        a {
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666666;
+            margin: 0px;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+        }
+
+        a:focus {
+            outline: none !important;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #000ba5;
+        }        
+
+        /*---------------------------------------------*/
+        input {
+            outline: none;
+            border: none;
+        }
+        button {
+            outline: none !important;
+            border: none;
+            background: transparent;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+        .limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+background: rgb(255, 255, 255);
+}
+
+.wrap-login100 {
+  width: 960px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 177px 130px 33px 95px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.login100-pic {
+  width: 316px;
+}
+
+.login100-pic img {
+  max-width: 100%;
+}
+
+
+/*------------------------------------------------------------------
+[  ]*/
+.login100-form {
+  width: 290px;
+}
+
+.login100-form-title {
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 900;
+  width: 100%;
+  display: block;
+  padding-bottom: 54px;
+}
+
+
+/*---------------------------------------------*/
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.input100 {
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+
+/*------------------------------------------------------------------
+[ Focus ]*/
+
+
+.input100:focus + .focus-input100 {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+.symbol-input100 {
+  font-size: 15px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: #666666;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+input[type=submit]{
+  font-size: 16px;
+  background: linear-gradient(#000000 5%, #000000 100%);
+  border: 1px solid #000000;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px 0;
+  outline:none;
+  }
+  input[type=submit]:hover{
+  background: linear-gradient(#ffffff 5%, #ffffff 100%);
+  color: #000000;
+  border: 1px solid black;
+  }
+input[type=button]{
+  font-size: 16px;
+  background: linear-gradient(#000000 5%, #000000 100%);
+  border: 1px solid #000000;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px 0;
+  outline:none;
+  }
+  input[type=button]:hover{
+  background: linear-gradient( #0251b9 1%, #0251b9  100%);
+  color: #ffffff;
+  border: 1px solid #0251b9;
+  }
+.login100-form-btn {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #0251b9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn a:hover {
+  background: #333333;
+}
+
+    </style>
+</head>
+
+<body onload="time()">
+    <div id="clock"></div>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                      <img src="images/Customer-Supprt.png" alt="IMG">
+                </div>
+
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        ĐĂNG NHẬP QUẢN TRỊ WEBSITE
+                    </span>
+                    <form action="custommer.html">
+                    <div class="wrap-input100 validate-input"
+                        data-validate="Bạn cần nhập đúng thông tin như: ex@abc.xyz">
+                        <input class="input100" type="text" placeholder="Tài Khoản" name="username" id="username">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password không được bỏ trống!">
+                        <input class="input100" type="password" placeholder="Mật Khẩu" name="current-password"
+                            id="password-field">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id = "the-eye"></span>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <input type="button" value="Đăng Nhập" id="submit" onclick="validate()" />
+                        <input type="button" value="Đăng Ký" id="sign-up" onclick="window.location='form3.html'" style="margin-top: 10px;" />
+                    </div>
+                </form>
+                <div class="text-center p-t-12">
+                    <span class="txt1">
+                        Bạn quên mật khẩu?
+                    </span>
+                    <a class="txt2" href="./tim-lai-mat-khau.html">
+                        Tài khoản / mật khẩu?
+                    </a>
+                </div>
+                <div class="text-center p-t-135">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+   <script>
+       $('.js-tilt').tilt({
+           scale:1.1
+       })
+   </script>
+   <script src="/js/main.js"></script>
+   <script type="text/javascript">
+    function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password-field").value;
+        //Set 1 Admin ảo để đăng nhập quản trị
+        if (username == "admin" && password == "1") {
+            alert("Bạn Đã Đăng Nhập Với Tư Cách Admin");
+            window.location = "./";
+            return true;
+        }
+        if(username == "manager01@test.ru" && password == "manager01") {
+            alert("Bạn Đã Đăng Nhập Với Tư Cách Quản lý");
+            window.location = "./";
+            return true;
+        }
+        if(username == "employee99@test.ru" && password == "employee99") {
+            alert("Bạn Đã Đăng Nhập Với Tư Cách Nhân viên");
+            window.location = "./";
+            return true;
+        }
+        //Nếu không nhập gì mà nhấn đăng nhập thì sẽ báo lỗi
+        if (username == "" && password == "") {
+            alert("Bạn Chưa Nhập Thông Tin\nVui Lòng Kiểm Tra Lại");
+            return false;
+        }
+        //Nếu không nhập tài khoản sẽ báo lỗi
+        if (username == null || username == "") {
+            alert("Bạn Chưa Nhập Tài Khoản\nVui Lòng Kiểm Tra Tài Khoản");
+            return false;
+        } 
+        //Nếu không nhập mật khẩu sẽ báo lỗi
+        if (password == null || password == "") {
+            alert("Bạn Chưa Nhập Mật Khẩu\nVui Lòng Kiểm Tra Mật Khẩu");
+            return false;
+        }
+       
+        alert("Account Invalid\nVui Lòng Kiểm Tra Hoặc Nhấn Quên Mật Khẩu");
+    }
+
+    //show/hide pass
+    function myFunction(){
+        var x = document.getElementById("myInput");
+        if (x.type === "password"){
+            x.type = "text"
+        } else {
+            x.type = "password";
+        }
+    }
+    $(".toggle-password").click(function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+    });
+    function time() {
+        var today = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Chủ Nhật";
+        weekday[1] = "Thứ Hai";
+        weekday[2] = "Thứ Ba";
+        weekday[3] = "Thứ Tư";
+        weekday[4] = "Thứ Năm";
+        weekday[5] = "Thứ Sáu";
+        weekday[6] = "Thứ Bảy";
+        var day = weekday[today.getDay()];
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        nowTime = h + ":" + m + ":" + s;
+        if (dd < 10) { dd = '0' + dd} if (mm < 10) { mm = '0' + mm} today = day + ', ' + dd + '/' + mm + '/' + yyyy;
+        tmp = '<i class="fa fa-clock-o" aria-hidden="true"></i> <span class="date">' + today + ' | ' + nowTime + '</span>';
+        document.getElementById("clock").innerHTML = tmp;
+        clocktime = setTimeout("time()", "1000", "Javascript");
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    }
+
+   </script>
+</body>
+
+</html>

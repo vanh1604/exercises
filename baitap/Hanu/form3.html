@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            position: absolute;
+            top:1%;
+            left: 1%;
+            right: 1%;
+            bottom: 1%;
+            border: 1px solid #000;
+        }
+        .form{
+            position:relative;
+            position:absolute;
+            top:40%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            border: 1px solid #000;
+            width: 80%;
+            height: 400px;
+        }
+        .header{
+            position: absolute;
+            top:-2%;
+            left: 10px;
+            background-color: #fff;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        label{
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+            top:10%;
+            left: 10%;
+        }
+        .important{
+            color: #ff0000;
+        }
+        input,select{
+            position: absolute;
+            left: 16%;
+            width: auto;
+        }
+        button{
+            position: relative;
+            bottom: -60%;
+            width: 5%;
+            background-color: #ccc;
+            border: none;
+            box-shadow: 10px #000;
+            cursor: pointer;
+            line-height: 200%;
+        }
+        #confirm{
+            width: 3%;
+        }
+        .error{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            color: #ff0000;
+            display: none;
+            position: absolute;
+            left: -23.5%;
+        }
+        .heading{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="customer">
+                <div class="header">Đăng ký</div>
+                <label for="">
+                        <p class="heading">Tên đầy đủ <div class="important">*</div></p>
+                        <input type="text" id = "name">
+                    </label>
+                    <div class="error">Điền chuẩn vào con</div>
+                <label for="">
+                    <p class="heading">Email<div class="important">*</div></p>
+                    <input type="email">
+                    
+                </label>
+                <div class="error">Điền chuẩn vào con</div>
+                <label for="">
+                    <p class="heading">Tài khoản<div class="important">*</div></p>
+                    <input type="text">
+                </label>
+                <div class="error">Điền chuẩn vào con</div>
+                <label for="">
+                    <p class="heading">Mật khẩu<div class="important">*</div></p>
+                    <input type="password">
+                </label>
+                <div class="error">Điền chuẩn vào con</div>
+                <label for="">
+                    <p class="heading">Điền lại mật khẩu<div class="important">*</div></p>
+                    <input type="password">
+                </label>
+                <div class="error">Điền chuẩn vào con</div>
+            </div>
+            <button id = "button">
+                OK
+            </button>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <button id = "cancel">
+                    Cancel
+                </button>
+            </a>
+        </div>
+    </div>
+    <script>
+        var input = document.getElementsByTagName('input');
+
+        var n = input.length;
+        for(let i=0;i<document.querySelectorAll('.error').length;++i){
+            input[i].onfocus = function(){
+                document.querySelectorAll('.error')[i].style.display = "none";
+            }
+        }
+        function accountValidate(account){
+            let length = account.length;
+            for(let i=0;i<length;++i){
+                if((!
+                (account.charAt(i)>='A'&&account.charAt(i)<='Z')
+                &&!(account.charAt(i)>='a'&&account.charAt(i)<='z')
+                &&!account.charAt(i).isNumber()))return false;
+            }
+            return true;
+            
+        }
+        function phoneValidate(){
+            var elem = document.getElementById('phone-number');
+            return elem.value.startsWith('0')
+            && elem.value.length == 10
+            && elem.value.isNumber()
+            ;
+        }
+
+        function nameValidate(str){
+            str = str.removeVietnameseTones(str);
+            return str.isAlpha();
+        }
+
+        function nameValidate(){
+            var elem = document.getElementById('name');
+            var str = removeVietnameseTones(elem.value);
+            return str.isAlpha();
+        }
+        function emailValidate(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+            }
+        function passwordValidate(){
+            return input[input.length-1].value == input[input.length-2].value;
+        }
+
+        document.getElementById('button').onclick=function(){
+            var result = [];
+            for(let i=0;i<n;++i){
+                if(!input[i].value){
+                    document.querySelectorAll('.error')[i].style.display = "block";
+                    result.push(false);
+                }
+                else{
+                    document.querySelectorAll('.error')[i].style.display = "none";
+                    result.push(true);
+                }
+            }
+            if(!nameValidate()){
+                document.querySelectorAll('.error')[0].style.display = "block";
+                result[0]=false;
+            }
+            if(!passwordValidate()){
+                document.querySelectorAll('.error')[document.querySelectorAll('.error').length-1].style.display = "block";
+                result[result.length-1] = false;
+            }
+            if(!emailValidate(input[1].value)){
+                document.querySelectorAll('.error')[1].style.display = "block";
+                result[1]=false;                
+            }
+            if(!accountValidate(input[2].value)){
+                document.querySelectorAll('.error')[2].style.display = "block";
+                result[2]=false;                
+
+            }
+            for(let i=0;i<n;++i){
+                if(!result[i])return;
+            }
+            alert("Chúc mừng quý ngài "+input[0].value+" đã đăng ký thành công tài khoản "+ input[2].value);
+            window.location = "./sign-in.html";
+        }
+
+   
+        function removeVietnameseTones(str) {
+            str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"); 
+            str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e"); 
+            str = str.replace(/ì|í|ị|ỉ|ĩ/g,"i"); 
+            str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o"); 
+            str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u"); 
+            str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y"); 
+            str = str.replace(/đ/g,"d");
+            str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+            str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+            str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+            str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+            str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+            str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+            str = str.replace(/Đ/g, "D");
+            // Some system encode vietnamese combining accent as individual utf-8 characters
+            // Một vài bộ encode coi các dấu mũ, dấu chữ như một kí tự riêng biệt nên thêm hai dòng này
+            str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // ̀ ́ ̃ ̉ ̣  huyền, sắc, ngã, hỏi, nặng
+            str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // ˆ ̆ ̛  Â, Ê, Ă, Ơ, Ư
+            // Remove extra spaces
+            // Bỏ các khoảng trắng liền nhau
+            // str = str.replace(/ + /g," ");
+            // str = str.trim();
+            // Remove punctuations
+            // Bỏ dấu câu, kí tự đặc biệt
+            // str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ");
+            return str;
+        }
+
+        String.prototype.isNumber = function(){
+            return Number(this) == this;
+        }
+
+        String.prototype.isAlphaChar = function(){
+            return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||this==' ';
+        }
+
+        String.prototype.isAlpha = function(){
+            let n = this.length;
+
+            for(let i=0;i<n;++i){
+                if(!(this.charAt(i).isAlphaChar()))return false;
+            }
+            return true;
+        }        
+    </script>
+</body>
+</html>

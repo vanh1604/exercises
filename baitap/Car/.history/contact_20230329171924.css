@@ -1,0 +1,17 @@
+.modal{
+    margin: 0 auto;
+    width: 600px;
+}
+.container{
+   text-align: center;
+   margin-top: 20px;
+}
+.header{
+    background-color: aqua;
+    padding: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+input{
+    
+}

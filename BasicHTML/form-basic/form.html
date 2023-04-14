@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1>HTML Form</h1>
+      <div class="main">
+        <form class="form" id="myForm">
+          <div class="flex">
+            <label for="first-name">Fisrt Name :</label>
+            <input
+              class="first"
+              type="text"
+              id="Fisrt"
+              name="name"
+            /><br /><br />
+          </div>
+          <div class="flex">
+            <label for="last-name">Last name :</label>
+            <input class="last" type="text" id="Last" name="name" /><br /><br />
+          </div>
+          <div class="flex">
+            <label for="Date">Date of Birth:</label>
+            <input class="date" type="date" id="Date" name="Date" /><br /><br />
+          </div>
+          <div class="flex">
+            <label for="email">Email:</label>
+            <input
+              class="email"
+              type="email"
+              id="email"
+              name="email"
+            /><br /><br />
+          </div>
+          <div class="flex">
+            <label for="phone">Mobile Phone:</label>
+            <input
+              class="phone"
+              type="text"
+              id="phone"
+              name="phone"
+            /><br /><br />
+          </div>
+
+          <button class="submit" type="submit" id="submitBtn">Submit</button>
+          <button class="reset" id="reset">Reset</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./form.js"></script>
+</html>

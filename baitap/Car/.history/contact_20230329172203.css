@@ -1,0 +1,49 @@
+.modal {
+  margin: 0 auto;
+  width: 600px;
+}
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+.header {
+  background-color: aqua;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+.box {
+  width: 100%;
+  height: fit-content;
+  min-height: 70%;
+  /* height: 470px; */
+  background-color: #fff;
+}
+.modal ul {
+  width: 100%;
+}
+.modal li {
+  justify-content: center;
+}
+.row-2 input {
+  width: 45% !important;
+  margin-right: 10px;
+}
+.modal select {
+  color: #ccc;
+}
+.modal input[type="text"],
+.modal select {
+  width: 92%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 8px;
+}
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+input {
+}

@@ -1,0 +1,32 @@
+.modal {
+  margin: 0 auto;
+  width: 600px;
+}
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+.header {
+  background-color: aqua;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+.box {
+  width: 100%;
+  height: fit-content;
+  min-height: 70%;
+  /* height: 470px; */
+  background-color: #fff;
+}
+.header {
+  width: 100%;
+  background-color: deepskyblue !important;
+  color: #fff;
+  text-align: center;
+  line-height: 132px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+input {
+}
